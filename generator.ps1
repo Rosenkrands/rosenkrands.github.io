@@ -7,6 +7,7 @@ $html_basic =
 <!DOCTYPE html>
 <html lang = "en">
 <head>
+{% include google_analytics.html}
 <title>Projects</title>
 <link rel = 'icon' href="icon.png">
 </head>
