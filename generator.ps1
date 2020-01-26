@@ -26,6 +26,8 @@ Set-Content -Path .\projects.html -Value $html_basic
 
 $blackboard_folders = get-childitem -Path "$dir\files\blackboard"
 
+Add-content -path .\projects.html -value "<a href = index.html>Homepage</a>"
+
 ForEach ($f in $blackboard_folders.name) {
     Add-content -path .\projects.html -value "<a href = ""#$f"" rel = ""next"">$f</a>"
 }
@@ -34,11 +36,12 @@ ForEach ($f in $blackboard_folders.name) {
 $semester_heading = "<a id = ""$f""><h1>$f</h1></a>"
 Add-Content -Path .\projects.html -value $semester_heading
 $courses = Get-ChildItem -Path "$dir\files\blackboard\$f"
+
 ForEach ($c in $courses.name) {
 Add-content -path .\projects.html -value "<a href = ""#$c"" rel = ""next"">$c</a>"
 }
     ForEach ($c in $courses.name) {
-    $course_heading = "<a href = ""#top"">top</a><a id = ""$c""><h2>$c</h2></a>"
+    $course_heading = "<a id = ""$c""><h2>$c</h2><p></a><a href = ""#top"">top</a></p>"
     Add-content -Path .\projects.html -value $course_heading
     $pictures = Get-ChildItem -path "$dir\files\blackboard\$f\$c"    
         ForEach ($p in $pictures.name) {
@@ -50,4 +53,4 @@ Add-content -path .\projects.html -value "<a href = ""#$c"" rel = ""next"">$c</a
 
 Add-Content -Path .\projects.html -Value '</html>'
 
-Get-Content -Path .\projects.html
+write-host "All done!"
