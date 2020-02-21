@@ -7,6 +7,7 @@ $html_basic =
 <!DOCTYPE html>
 <html lang = "en">
 <head>
+<link rel="stylesheet" type="text/css" href="style.css">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156578046-1"></script>
 <script>
@@ -33,7 +34,7 @@ $f
 }
 write-host "-------------------------------"
 
-Add-content -path .\projects.html -value "<a href = index.html>Homepage</a>"
+Add-content -path .\projects.html -value "<a href = index.html>Home</a>"
 
 ForEach ($f in $blackboard_folders.name) {
     Add-content -path .\projects.html -value "<a href = ""#$f"" rel = ""next"">$f</a>"

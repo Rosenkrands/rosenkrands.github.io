@@ -1,0 +1,25 @@
+body {
+  background-color: white;
+  text-align: center;
+}
+
+h1, h2 {
+	background-color: black;
+  font-family: arial;
+  color: white;
+  margin-left: 20px;
+}
+
+a:link, a:visited {
+  background-color: grey;
+  font-family: arial;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: darkgrey;
+}
