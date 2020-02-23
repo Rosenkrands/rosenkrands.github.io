@@ -4,15 +4,15 @@ body {
 }
 
 h1, h2 {
-	background-color: black;
-  font-family: arial;
+  background-color: grey;
+  font-family: verdana;
   color: white;
   margin-left: 20px;
 }
 
 a:link, a:visited {
   background-color: grey;
-  font-family: arial;
+  font-family: verdana;
   color: white;
   padding: 5px 10px;
   text-align: center;
