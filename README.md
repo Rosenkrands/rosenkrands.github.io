@@ -1,4 +1,6 @@
 # rosenkrands.github.io
+[![Generic badge](https://img.shields.io/badge/status-experimental-orange.svg)](https://shields.io/)
+
 The purpose of this website is to gather pictures of exercises from courses during my studies at Aalborg University.
 
 # Set-up
