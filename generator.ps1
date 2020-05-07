@@ -1,5 +1,3 @@
-﻿#Set-Location 'C:\Users\Kasper\Desktop\github_repos\rosenkrands.github.io'
-
 $html_basic = 
 @"
 <!DOCTYPE html>
