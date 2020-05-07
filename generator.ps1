@@ -1,4 +1,4 @@
-﻿Set-Location 'C:\Users\Kasper\Desktop\github_repos\rosenkrands.github.io'
+﻿#Set-Location 'C:\Users\Kasper\Desktop\github_repos\rosenkrands.github.io'
 
 $html_basic = 
 @"
@@ -23,7 +23,7 @@ $html_basic =
 
 Set-Content -Path .\projects.html -Value $html_basic
 
-$blackboard_folders = get-childitem -Path .\files\blackboard
+$blackboard_folders = get-childitem -Path $PSScriptRoot\files\blackboard
 
 write-host "The following folders was found"
 write-host "-------------------------------"
@@ -32,35 +32,35 @@ $f
 }
 write-host "-------------------------------"
 
-Add-content -path .\projects.html -value "<a href = index.html>Home</a>"
+Add-content -path $PSScriptRoot\projects.html -value "<a href = index.html>Home</a>"
 
 ForEach ($f in $blackboard_folders.name) {
-    Add-content -path .\projects.html -value "<a href = ""#$f"" rel = ""next"">$f</a>"
+    Add-content -path $PSScriptRoot\projects.html -value "<a href = ""#$f"" rel = ""next"">$f</a>"
 }
 
 ForEach ($f in $blackboard_folders.name) {
 $semester_heading = "<a id = ""$f""><h1>$f</h1></a>"
-Add-Content -Path .\projects.html -value $semester_heading
-$courses = Get-ChildItem -Path .\files\blackboard\$f
+Add-Content -Path $PSScriptRoot\projects.html -value $semester_heading
+$courses = Get-ChildItem -Path $PSScriptRoot\files\blackboard\$f
 
 ForEach ($c in $courses.name) {
-Add-content -path .\projects.html -value "<a href = ""#$c"" rel = ""next"">$c</a>"
+Add-content -path $PSScriptRoot\projects.html -value "<a href = ""#$c"" rel = ""next"">$c</a>"
 }
     ForEach ($c in $courses.name) {
     write-host "-------------------------------"
     write-host "Found the course $c from $f"
     $course_heading = "<a id = ""$c""><h2>$c</h2><p></a><a href = ""#top"">top</a></p>"
-    Add-content -Path .\projects.html -value $course_heading
-    $pictures = Get-ChildItem -path .\files\blackboard\$f\$c   
+    Add-content -Path $PSScriptRoot\projects.html -value $course_heading
+    $pictures = Get-ChildItem -path $PSScriptRoot\files\blackboard\$f\$c   
         ForEach ($p in $pictures.name) {
             $html_picture = "<img src = ""files\blackboard\$f\$c\$p"", width = ""500"">"
-            Add-Content -Path .\projects.html -value $html_picture
+            Add-Content -Path $PSScriptRoot\projects.html -value $html_picture
         }
     write-host "Pictures from ""$c"" have been added"
     write-host "-------------------------------"
     }
 }
 
-Add-Content -Path .\projects.html -Value '</html>'
+Add-Content -Path $PSScriptRoot\projects.html -Value '</html>'
 
 write-host "All done!"
