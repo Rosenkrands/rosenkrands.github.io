@@ -8,4 +8,4 @@ At this point the core of the website is composed of projects.html, this html do
 
 # generator.ps1
 In a nutshell the script looks for sub paths of the path .\files\blackboard.
-For each sub path (which correspond to a semester) the scripts writes a heading to the html document, then the scripts looks for sub paths within each semester folder (which correspond to a course) and then for each image in this, path inserts this picture to the html document.
+For each sub path (which correspond to a semester) the scripts writes a heading to the html document, then the scripts looks for sub paths within each semester folder (which correspond to a course) and then for each image in this path, inserts this picture to the html document.
