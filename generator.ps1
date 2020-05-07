@@ -1,6 +1,4 @@
-﻿cd 'C:\Users\Kasper\Desktop\github_repos\rosenkrands.github.io'
-
-#$dir = [System.IO.Path]::GetDirectoryName($myInvocation.MyCommand.Definition)
+﻿Set-Location 'C:\Users\Kasper\Desktop\github_repos\rosenkrands.github.io'
 
 $html_basic = 
 @"
