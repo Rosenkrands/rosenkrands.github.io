@@ -62,3 +62,5 @@ Add-content -path $PSScriptRoot\projects.html -value "<a href = ""#$c"" rel = ""
 Add-Content -Path $PSScriptRoot\projects.html -Value '</html>'
 
 write-host "All done!"
+
+read-host -Prompt 'Press any key to close this window'
