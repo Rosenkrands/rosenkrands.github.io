@@ -3,15 +3,17 @@ body {
   text-align: center;
 }
 
+p {
+  font-family: helvetica;
+}
+
 h1, h2 {
-  background-color: grey;
   font-family: verdana;
-  color: white;
-  margin-left: 20px;
+  color: black;
 }
 
 a:link, a:visited {
-  background-color: grey;
+  background-color: rgb(148, 148, 148);
   font-family: verdana;
   color: white;
   padding: 5px 10px;
